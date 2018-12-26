@@ -1,4 +1,4 @@
-<div align="center"><h3>TodoList-Django</h3> </div>
+<div align="center"><h1>TodoList-Django</h1> </div>
 <div align="center">Sample TodoList in Django app </div>
 
 
