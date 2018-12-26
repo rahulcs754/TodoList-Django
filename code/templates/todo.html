@@ -1,0 +1,21 @@
+<h1>Todo list</h1>
+
+<!--<ul>
+	<li>first list 01</li>
+	<li>second list 02</li>
+</ul> -->
+
+<ul>
+	{% for todo_item in all_items %}
+	<li>{{ todo_item.content }}
+	<form action="/deletetodo/{{todo_item.id}}/" style='display:inline-block;' method='post'>{% csrf_token %}
+		<input type="submit" value="DELETE">
+	</form>
+	</li>
+	{% endfor %}
+</ul>
+
+<form action='/addtodo/' method='post'>{% csrf_token %}
+	<input type='text' name='content'/>
+	<input type='submit' value='Add'>
+</form>
